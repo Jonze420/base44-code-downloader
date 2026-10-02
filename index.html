@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Base44 Code Downloader — Chrome Extension</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        background: #0d0f14;
+        color: #f5f7fb;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background-image:
+          radial-gradient(circle at 15% 0%, rgba(66, 153, 225, 0.18), transparent 30%),
+          radial-gradient(circle at 95% 10%, rgba(236, 72, 153, 0.12), transparent 28%);
+      }
+      .info {
+        max-width: 420px;
+        text-align: center;
+        color: #8ea2c6;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .info a { color: #9bc6ff; }
+      .info code {
+        background: rgba(255,255,255,0.08);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 13px;
+      }
+      .popup-frame {
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      }
+      iframe { display: block; border: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="popup-frame">
+      <iframe src="popup.html" width="390" height="520" title="Extension popup preview"></iframe>
+    </div>
+    <div class="info">
+      <p>This is a <strong>Chrome Extension</strong> (Manifest V3) — the popup UI above is what users see when they click the extension icon.</p>
+      <p style="margin-top: 12px;">To use it for real, load it as an unpacked extension in Chrome via <code>chrome://extensions</code> → Developer mode → Load unpacked.</p>
+    </div>
+  </body>
+</html>
