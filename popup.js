@@ -74,6 +74,11 @@ const DEFAULT_PATHS = [
 init();
 
 async function init() {
+  if (typeof chrome === "undefined") {
+    tabStatus.textContent = "Podgląd";
+    log("To jest podgląd UI wtyczki. Załaduj jako rozszerzenie Chrome, aby pobrać kod.");
+    return;
+  }
   activeTab = await getActiveTab();
   const appId = extractAppId(activeTab?.url || "");
   tabStatus.textContent = appId ? "Base44" : "Brak Base44";
